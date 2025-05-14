@@ -2,20 +2,49 @@
 <html>
 <head>
     <title>Profil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Profil Praktikan</h1>
-    <nav>
-        <a href="/">Beranda</a> |
-        <a href="/home/profil">Profil</a>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Praktikum</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/home/profil">Profil</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <ul>
-        <li>Nama: <?= $profil['nama']; ?></li>
-        <li>NIM: <?= $profil['nim']; ?></li>
-        <li>Asal Prodi: <?= $profil['asal_prodi']; ?></li>
-        <li>Hobi: <?= $profil['hobi']; ?></li>
-        <li>Skill: <?= $profil['skill']; ?></li>
-        <li>Gambar: <br><img src="/img/<?= $profil['gambar']; ?>" width="100"></li>
-    </ul>
+
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h3 class="mb-0">Profil Praktikan</h3>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center mb-3">
+                        <img src="/img/<?= $profil['gambar']; ?>" class="img-thumbnail" width="300" alt="Foto Profil">
+                    </div>
+                    <div class="col-md-9">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Nama:</strong> <?= $profil['nama']; ?></li>
+                            <li class="list-group-item"><strong>NIM:</strong> <?= $profil['nim']; ?></li>
+                            <li class="list-group-item"><strong>Asal Prodi:</strong> <?= $profil['asal_prodi']; ?></li>
+                            <li class="list-group-item"><strong>Hobi:</strong> <?= $profil['hobi']; ?></li>
+                            <li class="list-group-item"><strong>Skill:</strong> <?= $profil['skill']; ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

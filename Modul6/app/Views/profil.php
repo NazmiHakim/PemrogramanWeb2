@@ -3,8 +3,21 @@
 <head>
     <title>Profil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url('<?= base_url('img/background.jpg'); ?>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
@@ -30,7 +43,7 @@
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-md-3 text-center mb-3">
-                        <img src="/img/<?= $profil['gambar']; ?>" class="img-thumbnail" width="300" alt="Foto Profil">
+                        <img src="<?= base_url('img/' . $profil['gambar']); ?>" class="img-thumbnail" width="300" alt="Foto Profil">
                     </div>
                     <div class="col-md-9">
                         <ul class="list-group list-group-flush">
